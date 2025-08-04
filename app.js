@@ -10,7 +10,7 @@ const navbar=[{link:'/basic',name:'home'},
     {link:'/basic/form',name:'AddEmployee'}
 ]
 
-const basicroutes=require('./routes/basicRoute')(navbar)
+const basicroutes=require('./routes/basicRoutes')(navbar)
 app.use('/basic',basicroutes)
 
 app.listen(port,()=>{

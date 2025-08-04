@@ -4,9 +4,9 @@ router.use(express.json())
 router.use(express.urlencoded({ extended: true }))
 
 var data = [
-  { id: 1, Name: "Bilal", designation: "HR", location: "kozhikode",salary:80000 },
-  {  id: 2, Name: "Marco", designation: "SDE", location: "Thiruvananthapuram",salary:90000 },
-  {  id: 3, Name: "Rocky", designation: "HR", location: "Cochin",salary:20000 }
+  { i: 1, Name: "Bilal", designation: "HR", location: "kozhikode",salary:80000 },
+  {  i: 2, Name: "Marco", designation: "SDE", location: "Thiruvananthapuram",salary:90000 },
+  {  i: 3, Name: "Rocky", designation: "HR", location: "Cochin",salary:20000 }
 ];
 
 function employeeroutes(nav) {
@@ -30,14 +30,7 @@ function employeeroutes(nav) {
         res.redirect('/basic')
     }
     )
-    // router.put('/edit/:id', (req, res) => {
-    //     data.splice(req.params.id, 1, req.body);
-    //     res.send(data);
-    // })
-    // router.delete('/remove/:id',(req,res) => {
-    //     data.pop();
-    //     res.send(data);
-    // })
+
     router.get('/edit/:id', (req, res) => {
         const index = req.params.id;
         const employee = data[index];
